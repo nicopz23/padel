@@ -1,0 +1,155 @@
+      /* Color verde personalizado */
+      .btn-green {
+          background-color: #CAD021;
+          /* Verde */
+          color: white;
+          /* Texto blanco */
+          border: 2px solid white;
+          /* Borde blanco para contraste */
+      }
+
+      .btn-green:hover {
+          background-color: #B0D15B;
+          /* Cambio de color al pasar el mouse */
+      }
+
+      /* Fondo con imagen en blanco y negro */
+      body {
+          background-image: url('../img/portada_inicio.jpg');
+          /* Imagen de fondo */
+          background-size: cover;
+          /* Cubrir todo el fondo */
+          background-position: center;
+          /* Centrar la imagen */
+          background-attachment: fixed;
+          /* Escala de grises */
+          color: white;
+          /* Texto blanco */
+      }
+
+      .body-overlay {
+          position: absolute;
+          /* Superposición sobre el fondo */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(73, 72, 72, 0.534);
+          /* Superposición negra con opacidad */
+          z-index: 0;
+          /* Asegura que esté detrás del contenido */
+      }
+
+      /* Estilo para el formulario con fondo negro y bordes redondeados */
+      .login-form {
+          background-color: rgba(0, 0, 0, 0.8);
+          /* Fondo negro con transparencia */
+          padding: 20px;
+          /* Espacio interno */
+          border-radius: 10px;
+          /* Bordes redondeados */
+          color: white;
+          /* Texto blanco */
+      }
+
+      .login-form .form-control {
+          background-color: white;
+          /* Fondo blanco para inputs */
+          border-color: #CAD021;
+          /* Borde verde */
+      }
+
+      .login-form .form-label {
+          color: white;
+          /* Texto blanco */
+      }
+
+      /* Adaptaciones para dispositivos móviles */
+      /* Para pantallas medianas, como tablets */
+      @media (max-width: 1024px) {
+          body {
+              background-color: #333;
+              /* Fondo gris oscuro para tablets */
+              background-image: none;
+              /* Sin imagen de fondo */
+          }
+
+          .login-form {
+              max-width: 80%;
+              /* Más amplio para tablets */
+              padding: 25px;
+              /* Más espacio interno */
+          }
+
+          .btn-green {
+              font-size: 18px;
+              /* Tamaño del texto ajustado para tablets */
+          }
+      }
+
+      /* Para teléfonos y dispositivos móviles más pequeños */
+      @media (max-width: 768px) {
+          body {
+              background-color: black;
+              /* Fondo completamente negro */
+              background-image: none;
+              /* Sin imagen de fondo */
+          }
+
+          .body-overlay {
+              background-color: rgba(0, 0, 0, 0.8);
+              /* Fondo negro con más opacidad */
+          }
+
+          /* Formulario centrado en la pantalla */
+          .login-form {
+              max-width: 90%;
+              /* Ocupa casi toda la pantalla en móviles */
+              margin: auto;
+              /* Centramos el formulario */
+              padding: 20px;
+              /* Espacio interno */
+              border-radius: 10px;
+              /* Bordes redondeados */
+          }
+
+          /* Ajustes para inputs en móviles */
+          .login-form .form-control {
+              padding: 10px;
+              /* Menos espacio interno */
+              border-color: white;
+              /* Borde blanco para contraste */
+          }
+
+          /* Botón ajustado para móviles */
+          .btn-green {
+              background-color: #CAD021;
+              /* Verde */
+              color: white;
+              /* Texto blanco */
+              border: 2px solid white;
+              /* Borde blanco */
+              font-size: 16px;
+              /* Tamaño del texto ajustado para móviles */
+          }
+      }
+
+      /* Para teléfonos muy pequeños */
+      @media (max-width: 480px) {
+          body {
+              background-color: #111;
+              /* Fondo más oscuro para teléfonos pequeños */
+          }
+
+          .login-form {
+              max-width: 95%;
+              /* Formulario más estrecho */
+              padding: 15px;
+              /* Espacio interno más pequeño */
+          }
+
+          .btn-green {
+              font-size: 14px;
+              /* Tamaño del texto ajustado para teléfonos pequeños */
+          }
+      }
