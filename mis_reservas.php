@@ -12,7 +12,7 @@ include("conexion.php");
 
 
 
-if(isset($_POST['eliminar_reserva'])) {
+if (isset($_POST['eliminar_reserva'])) {
     $idreservation = $_POST['idreservation'];
 
     // Eliminar las filas relacionadas en la tabla `play`
@@ -52,6 +52,7 @@ $reservations = $query_reservations->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Mis Reservas - Padel App</title>
@@ -75,7 +76,7 @@ $reservations = $query_reservations->fetchAll(PDO::FETCH_ASSOC);
                     <a class="nav-link">
                         <?php
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="partidas">Partidas</a></li>
@@ -111,7 +112,7 @@ $reservations = $query_reservations->fetchAll(PDO::FETCH_ASSOC);
                                 <h5 class="card-title"><?php echo $reservation['name']; ?></h5>
                                 <p class="card-text">Horario: <?php echo $reservation['playdate']; ?></p>
                                 <p class="card-text">Nº de jugadores: <?php echo $reservation['jugadores']; ?></p>
-                                
+
                                 <form action="" method="POST">
                                     <input type="hidden" name="idreservation" value="<?php echo $reservation['idreservation']; ?>">
                                     <button type="submit" name="eliminar_reserva" class="btn btn-danger">Eliminar Reserva</button>
@@ -136,4 +137,5 @@ $reservations = $query_reservations->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

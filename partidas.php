@@ -29,9 +29,8 @@ if (isset($_POST["idreserva"])) {
     $stm->bindParam(2, $idreserva);
     $stm->bindParam(3, $username);
     $stm->execute();
-    
 }
-if(isset($_POST["user"])) {
+if (isset($_POST["user"])) {
     header("Location: partidas");
 }
 ?>
@@ -63,7 +62,7 @@ if(isset($_POST["user"])) {
                     <a class="nav-link">
                         <?php
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
 
@@ -80,6 +79,9 @@ if(isset($_POST["user"])) {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fas fa-sign-out-alt"></i> Salir</a> <!-- Enlace para cerrar sesión -->
                 </li>
             </ul>
         </div>
@@ -100,7 +102,7 @@ if(isset($_POST["user"])) {
                 <?php foreach ($pistas as $pista) : ?>
                     <div class="col-md-4 mb-4"> <!-- Columnas más estrechas -->
                         <div class="card"> <!-- Tarjeta para la pista -->
-                            <img src="assets/img/<?php echo $pista["img"]; ?>" class="card-img-top" alt="Imagen de la pista" style="height:100px width:auto;"> <!-- Imagen más baja -->
+                            <img src="./assets/img/<?php echo $pista["img"]; ?>" class="card-img-top" alt="Imagen de la pista" style="height:100px width:auto;"> <!-- Imagen más baja -->
                             <div class="card-body"> <!-- Contenido de la tarjeta -->
                                 <h5 class="card-title"><?php echo $pista["name"]; ?></h5> <!-- Nombre de la pista -->
                                 <p id="resultado">En esta partida hay <?php echo $pista["espacios_libres"]; ?> espacios libres.</p> <!-- Espacios disponibles -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Contacto - Padel App</title>
@@ -10,8 +11,8 @@
 <body class="d-flex flex-column min-vh-100"> <!-- Flex para mantener el footer al fondo -->
 
     <!-- Navbar -->
-   <!-- Barra de Navegación -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <a class="navbar-brand d-flex align-items-center" href="./">
             <img src="https://assets-global.website-files.com/6127fb2c77e53513fea9657c/612d38df9b48bca5bd62f48b_padel-tech-logo.png" alt="Logo" width="200" height="auto" class="me-2">
         </a>
@@ -24,7 +25,7 @@
                     <a class="nav-link">
                         <?php
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
 
@@ -79,7 +80,7 @@
                     <label para="message">Mensaje</label>
                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
                 </div>
-               
+
                 <!-- Botón para enviar el formulario con margen -->
                 <button type="submit" class="btn btn-primary mt-4" style="background-color: #CAD021; color: white;">Enviar</button>
             </form>
@@ -97,4 +98,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

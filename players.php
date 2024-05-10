@@ -35,7 +35,7 @@ if (isset($_POST["fecha"])) {
                     <a class="nav-link">
                         <?php
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
 
@@ -52,6 +52,9 @@ if (isset($_POST["fecha"])) {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fas fa-sign-out-alt"></i> Salir</a> <!-- Enlace para cerrar sesión -->
                 </li>
             </ul>
         </div>

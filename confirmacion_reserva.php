@@ -23,9 +23,8 @@
                 <li class="nav-item">
                     <a class="nav-link">
                         <?php
-                        session_start();
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
 

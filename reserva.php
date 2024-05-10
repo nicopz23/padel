@@ -5,7 +5,7 @@ if (!isset($_SESSION["iduser"])) {
     header("Location: login");
     exit();
 }
-if(!isset($_GET["idcourt"])){
+if (!isset($_GET["idcourt"])) {
     header("Location: ./");
     exit();
 }
@@ -62,12 +62,12 @@ $result = $stm->fetchAll(PDO::FETCH_ASSOC);
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link">
-                    <?php 
-                    if(isset($_SESSION["username"])) {
-                        echo $_SESSION["username"];
-                    } ?></a>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <?php
+                        if (isset($_SESSION["username"])) {
+                            echo "Bienvenido " . $_SESSION["username"];
+                        } ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="partidas">Partidas</a>

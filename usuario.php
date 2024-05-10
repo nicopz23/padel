@@ -44,8 +44,8 @@ if (isset($_POST["username"])) {
 <body class="d-flex flex-column min-vh-100"> <!-- Flex para mantener el footer al fondo -->
 
     <!-- Navbar -->
-   <!-- Barra de Navegación -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <a class="navbar-brand d-flex align-items-center" href="./">
             <img src="https://assets-global.website-files.com/6127fb2c77e53513fea9657c/612d38df9b48bca5bd62f48b_padel-tech-logo.png" alt="Logo" width="200" height="auto" class="me-2">
         </a>
@@ -58,7 +58,7 @@ if (isset($_POST["username"])) {
                     <a class="nav-link">
                         <?php
                         if (isset($_SESSION["username"])) {
-                            echo $_SESSION["username"];
+                            echo "Bienvenido " . $_SESSION["username"];
                         } ?></a>
                 </li>
 
