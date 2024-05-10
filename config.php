@@ -12,4 +12,3 @@ define( 'DB_PASSWORD', '' );
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
 
-?>
